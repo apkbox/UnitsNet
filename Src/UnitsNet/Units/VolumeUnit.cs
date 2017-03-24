@@ -112,6 +112,16 @@ namespace UnitsNet.Units
         [Volume(1e-6)]
         Milliliter,
 
+        [I18n("en-US", "\u03BCl")]
+        [I18n("ru-RU", "мкл")]
+        [Volume(1e-9)]
+        Microliter,
+
+        [I18n("en-US", "nl")]
+        [I18n("ru-RU", "нл")]
+        [Volume(1e-12)]
+        Nanoliter,  
+
         [I18n("en-US", "gal (U.S.)")]
         [I18n("ru-RU", "Американский галлон")]
         [Volume(0.00378541)]

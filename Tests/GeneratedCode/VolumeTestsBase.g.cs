@@ -52,7 +52,9 @@ namespace UnitsNet.Tests
         public abstract double ImperialGallonsInOneCubicMeter { get; }
         public abstract double ImperialOuncesInOneCubicMeter { get; }
         public abstract double LitersInOneCubicMeter { get; }
+        public abstract double MicrolitersInOneCubicMeter { get; }
         public abstract double MillilitersInOneCubicMeter { get; }
+        public abstract double NanolitersInOneCubicMeter { get; }
         public abstract double UsGallonsInOneCubicMeter { get; }
         public abstract double UsOuncesInOneCubicMeter { get; }
 
@@ -75,7 +77,9 @@ namespace UnitsNet.Tests
             Assert.AreEqual(ImperialGallonsInOneCubicMeter, cubicmeter.ImperialGallons, Delta);
             Assert.AreEqual(ImperialOuncesInOneCubicMeter, cubicmeter.ImperialOunces, Delta);
             Assert.AreEqual(LitersInOneCubicMeter, cubicmeter.Liters, Delta);
+            Assert.AreEqual(MicrolitersInOneCubicMeter, cubicmeter.Microliters, Delta);
             Assert.AreEqual(MillilitersInOneCubicMeter, cubicmeter.Milliliters, Delta);
+            Assert.AreEqual(NanolitersInOneCubicMeter, cubicmeter.Nanoliters, Delta);
             Assert.AreEqual(UsGallonsInOneCubicMeter, cubicmeter.UsGallons, Delta);
             Assert.AreEqual(UsOuncesInOneCubicMeter, cubicmeter.UsOunces, Delta);
         }
@@ -98,7 +102,9 @@ namespace UnitsNet.Tests
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.ImperialGallon).ImperialGallons, Delta);
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.ImperialOunce).ImperialOunces, Delta);
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.Liter).Liters, Delta);
+            Assert.AreEqual(1, Volume.From(1, VolumeUnit.Microliter).Microliters, Delta);
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.Milliliter).Milliliters, Delta);
+            Assert.AreEqual(1, Volume.From(1, VolumeUnit.Nanoliter).Nanoliters, Delta);
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.UsGallon).UsGallons, Delta);
             Assert.AreEqual(1, Volume.From(1, VolumeUnit.UsOunce).UsOunces, Delta);
         }
@@ -123,7 +129,9 @@ namespace UnitsNet.Tests
             Assert.AreEqual(ImperialGallonsInOneCubicMeter, cubicmeter.As(VolumeUnit.ImperialGallon), Delta);
             Assert.AreEqual(ImperialOuncesInOneCubicMeter, cubicmeter.As(VolumeUnit.ImperialOunce), Delta);
             Assert.AreEqual(LitersInOneCubicMeter, cubicmeter.As(VolumeUnit.Liter), Delta);
+            Assert.AreEqual(MicrolitersInOneCubicMeter, cubicmeter.As(VolumeUnit.Microliter), Delta);
             Assert.AreEqual(MillilitersInOneCubicMeter, cubicmeter.As(VolumeUnit.Milliliter), Delta);
+            Assert.AreEqual(NanolitersInOneCubicMeter, cubicmeter.As(VolumeUnit.Nanoliter), Delta);
             Assert.AreEqual(UsGallonsInOneCubicMeter, cubicmeter.As(VolumeUnit.UsGallon), Delta);
             Assert.AreEqual(UsOuncesInOneCubicMeter, cubicmeter.As(VolumeUnit.UsOunce), Delta);
         }
@@ -147,7 +155,9 @@ namespace UnitsNet.Tests
             Assert.AreEqual(1, Volume.FromImperialGallons(cubicmeter.ImperialGallons).CubicMeters, Delta);
             Assert.AreEqual(1, Volume.FromImperialOunces(cubicmeter.ImperialOunces).CubicMeters, Delta);
             Assert.AreEqual(1, Volume.FromLiters(cubicmeter.Liters).CubicMeters, Delta);
+            Assert.AreEqual(1, Volume.FromMicroliters(cubicmeter.Microliters).CubicMeters, Delta);
             Assert.AreEqual(1, Volume.FromMilliliters(cubicmeter.Milliliters).CubicMeters, Delta);
+            Assert.AreEqual(1, Volume.FromNanoliters(cubicmeter.Nanoliters).CubicMeters, Delta);
             Assert.AreEqual(1, Volume.FromUsGallons(cubicmeter.UsGallons).CubicMeters, Delta);
             Assert.AreEqual(1, Volume.FromUsOunces(cubicmeter.UsOunces).CubicMeters, Delta);
         }

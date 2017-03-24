@@ -171,12 +171,30 @@ namespace UnitsNet
         }
 
         /// <summary>
+        /// Get Volume in Microliters.
+        /// </summary>
+        /// <remarks>Example: x = (y - b) / a where x is value in Microliters and y is value in base unit CubicMeters.</remarks>
+        public double Microliters
+        { 
+            get { return CubicMeters / 1E-09; }
+        }
+
+        /// <summary>
         /// Get Volume in Milliliters.
         /// </summary>
         /// <remarks>Example: x = (y - b) / a where x is value in Milliliters and y is value in base unit CubicMeters.</remarks>
         public double Milliliters
         { 
             get { return CubicMeters / 1E-06; }
+        }
+
+        /// <summary>
+        /// Get Volume in Nanoliters.
+        /// </summary>
+        /// <remarks>Example: x = (y - b) / a where x is value in Nanoliters and y is value in base unit CubicMeters.</remarks>
+        public double Nanoliters
+        { 
+            get { return CubicMeters / 1E-12; }
         }
 
         /// <summary>
@@ -342,12 +360,30 @@ namespace UnitsNet
         }
 
         /// <summary>
+        /// Get Volume from Microliters.
+        /// </summary>
+        /// <remarks>Example: y = ax + b where x is value in Microliters and y is value in base unit CubicMeters.</remarks>
+        public static Volume FromMicroliters(double microliters)
+        { 
+            return new Volume(1E-09 * microliters);
+        }
+
+        /// <summary>
         /// Get Volume from Milliliters.
         /// </summary>
         /// <remarks>Example: y = ax + b where x is value in Milliliters and y is value in base unit CubicMeters.</remarks>
         public static Volume FromMilliliters(double milliliters)
         { 
             return new Volume(1E-06 * milliliters);
+        }
+
+        /// <summary>
+        /// Get Volume from Nanoliters.
+        /// </summary>
+        /// <remarks>Example: y = ax + b where x is value in Nanoliters and y is value in base unit CubicMeters.</remarks>
+        public static Volume FromNanoliters(double nanoliters)
+        { 
+            return new Volume(1E-12 * nanoliters);
         }
 
         /// <summary>
@@ -408,8 +444,12 @@ namespace UnitsNet
                     return FromImperialOunces(value);
                 case VolumeUnit.Liter:
                     return FromLiters(value);
+                case VolumeUnit.Microliter:
+                    return FromMicroliters(value);
                 case VolumeUnit.Milliliter:
                     return FromMilliliters(value);
+                case VolumeUnit.Nanoliter:
+                    return FromNanoliters(value);
                 case VolumeUnit.UsGallon:
                     return FromUsGallons(value);
                 case VolumeUnit.UsOunce:
@@ -575,8 +615,12 @@ namespace UnitsNet
                     return ImperialOunces;
                 case VolumeUnit.Liter:
                     return Liters;
+                case VolumeUnit.Microliter:
+                    return Microliters;
                 case VolumeUnit.Milliliter:
                     return Milliliters;
+                case VolumeUnit.Nanoliter:
+                    return Nanoliters;
                 case VolumeUnit.UsGallon:
                     return UsGallons;
                 case VolumeUnit.UsOunce:

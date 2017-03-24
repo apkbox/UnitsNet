@@ -104,6 +104,16 @@ namespace UnitsNet.Tests.CustomCode
             get { return 1E6; }
         }
 
+        public override double MicrolitersInOneCubicMeter
+        {
+            get { return 1E9; }
+        }
+
+        public override double NanolitersInOneCubicMeter
+        {
+            get { return 1E12; }
+        }
+
         public override double UsGallonsInOneCubicMeter
         {
             get { return 264.17217; }
